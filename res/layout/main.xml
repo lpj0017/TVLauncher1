@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <com.funkyandroid.launcher.ui.HorizontalListView
+            android:id="@+id/header_favorites"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#ddd">
+    </com.funkyandroid.launcher.ui.HorizontalListView>
+    <ExpandableListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#00000000"
+            android:dividerHeight="0px"
+            android:layout_weight="1"
+            />
+    <com.funkyandroid.launcher.ui.HorizontalListView
+            android:id="@+id/footer_favorites"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#ddd">
+    </com.funkyandroid.launcher.ui.HorizontalListView>
+</LinearLayout>
+
