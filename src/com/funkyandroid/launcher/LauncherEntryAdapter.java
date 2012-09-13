@@ -91,12 +91,12 @@ public class LauncherEntryAdapter extends BaseExpandableListAdapter {
 
         final PackageManager pm = context.getPackageManager();
 
-        final AppCategoryEntry.AppInfo appInfo = (AppCategoryEntry.AppInfo) getChild(group, child);
+        final AppInfo appInfo = (AppInfo) getChild(group, child);
         ImageView icon = (ImageView)view.findViewById(R.id.icon);
         try {
             icon.setImageDrawable(pm.getApplicationIcon(appInfo.packageName));
-        } catch(PackageManager.NameNotFoundException nnfe) {
-            Log.e("FunkyLauncher", "Problem finding icon for package "+appInfo, nnfe);
+        } catch(PackageManager.NameNotFoundException nameNotFoundExcption) {
+            Log.e("FunkyLauncher", "Problem finding icon for package "+appInfo, nameNotFoundExcption);
             icon.setImageDrawable(pm.getApplicationIcon(context.getApplicationInfo()));
         }
 
@@ -120,26 +120,7 @@ public class LauncherEntryAdapter extends BaseExpandableListAdapter {
 
     public void add(final LauncherEntry entry) {
         entries.add(entry);
-        Collections.sort(entries, LauncherEntryComparatorInstanceHolder.INSTANCE);
+        Collections.sort(entries, LauncherEntryComparator.InstanceHolder.INSTANCE);
         notifyDataSetChanged();
-    }
-
-    /**
-     * Comparator to ensure that launcher entries are sorted.
-     */
-
-    private static class LauncherEntryComparator implements Comparator<LauncherEntry> {
-        public int compare(final LauncherEntry first, final LauncherEntry second) {
-            int sortOrder = first.getSortOrder() - second.getSortOrder();
-            if(sortOrder != 0) {
-                return sortOrder;
-            }
-
-            return second.getCaption().compareTo(first.getCaption());
-        }
-    }
-
-    private static class LauncherEntryComparatorInstanceHolder {
-        private static final LauncherEntryComparator INSTANCE = new LauncherEntryComparator();
     }
 }

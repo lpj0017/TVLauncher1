@@ -5,11 +5,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import com.funkyandroid.launcher.LauncherEntry;
-import com.funkyandroid.launcher.LauncherEntryView;
-import com.funkyandroid.launcher.R;
+import com.funkyandroid.launcher.*;
 import com.funkyandroid.launcher.database.DBHelper;
 
 import java.util.*;
@@ -19,7 +18,6 @@ import java.util.*;
  */
 public class AppCategoryEntry extends LauncherEntry {
     private static final String[] COLUMNS = { "packageName" };
-
 
     /**
      * The apps in this category
@@ -66,6 +64,7 @@ public class AppCategoryEntry extends LauncherEntry {
      */
 
     public Object getChild(int position) {
+        Log.i("FunkyLauncher", ":" + position);
         return apps.get(position);
     }
 
@@ -90,27 +89,6 @@ public class AppCategoryEntry extends LauncherEntry {
             }
         }
 
-        Collections.sort(apps, new AppInfoComparator());
-    }
-
-    /**
-     * Class representing application info
-     */
-
-    public class AppInfo {
-        public String appName;
-        public String packageName;
-    }
-
-    /**
-     * Comparator for sorting AppInfo objects
-     */
-
-    private class AppInfoComparator implements Comparator<AppInfo> {
-
-        @Override
-        public int compare(AppInfo appInfo, AppInfo appInfo1) {
-            return appInfo.appName.compareToIgnoreCase(appInfo1.appName);
-        }
+        Collections.sort(apps, AppInfoComparator.InstanceHolder.INSTANCE);
     }
 }
