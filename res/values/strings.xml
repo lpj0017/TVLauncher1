@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">FunkyLauncher</string>
     <string name="empty">Empty</string>
+    <string name="browser">Web</string>
     <string name="search">Search</string>
     <string name="settings">Settings</string>
 </resources>
