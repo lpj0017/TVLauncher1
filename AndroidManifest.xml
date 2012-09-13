@@ -15,5 +15,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <service android:name=".bluetooth.ListenerService"/>
     </application>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
 </manifest>

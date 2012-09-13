@@ -3,6 +3,7 @@ package com.funkyandroid.launcher.bluetooth;
 import java.io.IOException;
 
 import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
 import android.util.Log;
 
 import com.funkyandroid.launcher.Launcher;
@@ -19,7 +20,7 @@ public class BluetoothListener
 	/**
 	 * Activate the bluetooth listener.
 	 */
-	public void activate()
+	public void activate(final Context context)
 		throws IOException {
 		synchronized (BluetoothListener.class) {
 			if(currentlyActive != null) {
@@ -28,7 +29,7 @@ public class BluetoothListener
 
 			BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
 			if(adapter != null) {
-				currentlyActive = new Server(adapter);
+				currentlyActive = new Server(context, adapter);
 				currentlyActive.start();
 			} else {
 				Log.e(Launcher.LOG_TAG, "Bluetooth adapter not found");

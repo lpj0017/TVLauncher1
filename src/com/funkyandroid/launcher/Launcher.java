@@ -1,7 +1,10 @@
 package com.funkyandroid.launcher;
 
 import android.app.ExpandableListActivity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,8 +12,10 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.*;
+import com.funkyandroid.launcher.bluetooth.ConnectionHandlerThread;
 import com.funkyandroid.launcher.bluetooth.ListenerService;
 import com.funkyandroid.launcher.database.DBHelper;
 import com.funkyandroid.launcher.launcherentries.AppCategoryEntry;
@@ -27,6 +32,19 @@ public class Launcher extends ExpandableListActivity {
 
     private static final String DEFAULT_WEBPAGE = "http://www.funkyandroid.com/";
 
+    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(intent.getAction().equals(ConnectionHandlerThread.INTENT_ACTION_KEYPRESS)) {
+                int keyCode = intent.getIntExtra("keycode", 0);
+                int action = intent.getIntExtra("action", 0);
+                KeyEvent keyEvent = new KeyEvent(action, keyCode);
+                Log.i(Launcher.LOG_TAG, "Passing on "+keyCode+" : "+action);
+                getExpandableListView().dispatchKeyEvent(keyEvent);
+            }
+        }
+    };
+
     /**
      * Called when the activity is first created.
      */
@@ -36,11 +54,24 @@ public class Launcher extends ExpandableListActivity {
         setContentView(R.layout.main);
 
         getExpandableListView().setGroupIndicator(null);
+        getExpandableListView().requestFocus();
 
         new FavoritesBuilder().execute();
         new EntryBuilder().execute();
 
         startService(new Intent(this, ListenerService.class));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        this.registerReceiver(broadcastReceiver, new IntentFilter(ConnectionHandlerThread.INTENT_ACTION_KEYPRESS));
+    }
+
+    @Override
+    public void onPause() {
+        this.unregisterReceiver(broadcastReceiver);
+        super.onPause();
     }
 
     /**

@@ -34,7 +34,7 @@ public class ListenerService
 		super.onStartCommand(intent, flags, startId);
 
 		try {
-			bluetoothListener.activate();
+			bluetoothListener.activate(this);
 		} catch(IOException ex) {
 			Log.e(Launcher.LOG_TAG, "Error starting listener", ex);
 			sendBroadcast(new Intent(LISTENER_START_FAILED_INTENT));

@@ -6,6 +6,9 @@ import java.util.UUID;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
+import android.util.Log;
+import com.funkyandroid.launcher.Launcher;
 
 public class Server extends Thread {
 	/**
@@ -26,29 +29,37 @@ public class Server extends Thread {
 
 	private final BluetoothServerSocket mmServerSocket;
 
+    private Context context;
+
 	/**
 	 * Initialise
 	 * @param adapter
 	 */
-	public Server(final BluetoothAdapter adapter)
+	public Server(final Context context, final BluetoothAdapter adapter)
 		throws IOException {
+        this.context = context;
        	mmServerSocket = adapter.listenUsingRfcommWithServiceRecord(NAME, MY_UUID);
     }
 
     @Override
 	public void run() {
-        BluetoothSocket socket = null;
-        // Keep listening until exception occurs or a socket is returned
-        while (true) {
-            try {
-                socket = mmServerSocket.accept();
-            } catch (IOException e) {
-                break;
-            }
+        Log.i(Launcher.LOG_TAG, "Server running");
+        try {
+            BluetoothSocket socket = null;
+            // Keep listening until exception occurs or a socket is returned
+            while (true) {
+                try {
+                    socket = mmServerSocket.accept();
+                } catch (IOException e) {
+                    break;
+                }
 
-            if (socket != null) {
-            	(new ConnectionHandlerThread(socket)).start();
+                if (socket != null) {
+                    (new ConnectionHandlerThread(context, socket)).start();
+                }
             }
+        } catch(Exception ex) {
+            Log.e(Launcher.LOG_TAG, "Server bailed", ex);
         }
     }
 

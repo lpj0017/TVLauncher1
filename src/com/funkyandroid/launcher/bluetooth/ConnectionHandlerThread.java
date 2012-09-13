@@ -16,7 +16,7 @@ import com.funkyandroid.launcher.Launcher;
  * Class to handle a connection from a bluetooth client
  */
 
-class ConnectionHandlerThread extends Thread {
+public class ConnectionHandlerThread extends Thread {
 
     /**
      * The broadcast to handle a keypress
@@ -37,7 +37,8 @@ class ConnectionHandlerThread extends Thread {
 	private final BluetoothSocket mSocket;
 
 
-	public ConnectionHandlerThread(BluetoothSocket socket) {
+	public ConnectionHandlerThread(final Context context, BluetoothSocket socket) {
+        this.context = context;
 		mSocket = socket;
 	}
 
@@ -54,9 +55,13 @@ class ConnectionHandlerThread extends Thread {
                         if(keyCode == -1) {
                             break;
                         }
+                        int event = dis.readInt();
 
                         Intent broadcast = new Intent(INTENT_ACTION_KEYPRESS);
                         broadcast.putExtra("keycode", keyCode);
+                        broadcast.putExtra("event", event);
+
+                        Log.i(Launcher.LOG_TAG, "Dispatching "+keyCode+" : "+event);
                         context.sendBroadcast(broadcast);
                         dos.writeInt(0);
                     }
