@@ -62,7 +62,6 @@ public class LauncherEntryView extends LinearLayout {
     public void setEntry(final LauncherEntry entry ) {
         this.entry = entry;
         if(caption == null) {
-            Log.e("Launcher", "@"+getChildCount());
             for( int i = 0 ; i < getChildCount() ; i++ ) {
                 View v = getChildAt(i);
                 if(v instanceof TextView) {
