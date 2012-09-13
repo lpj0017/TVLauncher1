@@ -4,11 +4,13 @@ import android.app.ExpandableListActivity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
@@ -102,7 +104,7 @@ public class Launcher extends ExpandableListActivity {
 
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(DEFAULT_WEBPAGE));
             la.add(new SystemLauncherEntry(browserIntent, getText(R.string.browser).toString(), 1));
-
+/*
             SQLiteDatabase db = new DBHelper(Launcher.this).getReadableDatabase();
             try {
                 Cursor categories = db.query(DBHelper.CATEGORIES_TABLE, CATEGORY_COLUMNS, null, null, null, null, null );
@@ -116,6 +118,8 @@ public class Launcher extends ExpandableListActivity {
             } finally {
                 db.close();
             }
+*/
+            la.add(new AppCategoryEntry(Launcher.this, 1, getText(R.string.apps).toString()));
 
             return  la;
         }
@@ -134,6 +138,13 @@ public class Launcher extends ExpandableListActivity {
         protected void onPostExecute(final FavouritesAdapter adapter) {
             final HorizontalListView hsv = (HorizontalListView) findViewById(R.id.header_favorites);
             hsv.setAdapter(adapter);
+            hsv.setOnItemLongClickListener( new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> adapterView, View view, int pos, long id) {
+                    adapter.remove(adapter.getItem(pos));
+                    return true;
+                }
+            });
 
             getExpandableListView().setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override
@@ -155,7 +166,7 @@ public class Launcher extends ExpandableListActivity {
 
                         final AppInfo appInfo =
                                 (AppInfo) ((AppCategoryEntry) entry).getChild(child);
-                        adapter.add(new FavoriteInfo(appInfo));
+                        adapter.save(new FavoriteInfo(appInfo));
 
                         return true;
                     }
@@ -184,6 +195,7 @@ public class Launcher extends ExpandableListActivity {
                             info.name = info.packageName;
                         }
 
+                        Log.i("FunkyLauncher", info.toString());
                         adapter.add(info);
                     }
                 } finally {

@@ -3,6 +3,7 @@ package com.funkyandroid.launcher.launcherentries;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -73,6 +74,22 @@ public class AppCategoryEntry extends LauncherEntry {
      */
 
     private void populateChildren(final Context context) {
+
+        PackageManager pm = context.getPackageManager();
+        Intent appStartIntent = new Intent(Intent.ACTION_MAIN);
+        appStartIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+        for(ResolveInfo packageInfo : pm.queryIntentActivities(appStartIntent, 0)) {
+            AppInfo info = new AppInfo();
+            try {
+                info.packageName = packageInfo.activityInfo.packageName;
+                info.appName = pm.getApplicationLabel(pm.getApplicationInfo(info.packageName, 0)).toString();
+                apps.add(info);
+            } catch(PackageManager.NameNotFoundException nnfe) {
+                Log.e("FunkyLauncher", "Name Not Found", nnfe);
+            }
+        }
+
+/*
         PackageManager pm = context.getPackageManager();
         SQLiteDatabase db = new DBHelper(context).getReadableDatabase();
         Cursor appsCursor = db.query(DBHelper.APPS_TABLE, COLUMNS, "category_id = "+id, null, null, null, null, null );
@@ -88,7 +105,7 @@ public class AppCategoryEntry extends LauncherEntry {
                 ; // Do nothing, just ignore it.
             }
         }
-
+*/
         Collections.sort(apps, AppInfoComparator.InstanceHolder.INSTANCE);
     }
 }

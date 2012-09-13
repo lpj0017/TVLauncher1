@@ -16,7 +16,6 @@ public final class R {
     public static final class id {
         public static final int empty=0x7f060004;
         public static final int entry=0x7f060002;
-        public static final int footer_favorites=0x7f060006;
         public static final int header_favorites=0x7f060005;
         public static final int icon=0x7f060000;
         public static final int name=0x7f060001;
@@ -24,14 +23,17 @@ public final class R {
     }
     public static final class layout {
         public static final int app_category_list_entry=0x7f030000;
-        public static final int list_entry=0x7f030001;
-        public static final int main=0x7f030002;
+        public static final int favourite_entry=0x7f030001;
+        public static final int list_entry=0x7f030002;
+        public static final int main=0x7f030003;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
-        public static final int empty=0x7f040001;
-        public static final int search=0x7f040002;
-        public static final int settings=0x7f040003;
+        public static final int app_name=0x7f040001;
+        public static final int apps=0x7f040000;
+        public static final int browser=0x7f040003;
+        public static final int empty=0x7f040002;
+        public static final int search=0x7f040004;
+        public static final int settings=0x7f040005;
     }
     public static final class style {
         public static final int CodeFont=0x7f050000;

@@ -2,13 +2,14 @@ package com.funkyandroid.launcher;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.util.Log;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
+import com.funkyandroid.launcher.database.DBHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -54,10 +55,8 @@ public class FavouritesAdapter extends BaseAdapter
         final FavoriteInfo appInfo = getItem(i);
         ImageView icon = (ImageView)view.findViewById(R.id.icon);
         try {
-            Log.i("FunkyLauncher", appInfo.packageName);
             icon.setImageDrawable(pm.getApplicationIcon(appInfo.packageName));
         } catch(PackageManager.NameNotFoundException nameNotFoundException) {
-            Log.e("FunkyLauncher", "Problem finding icon for package " + appInfo, nameNotFoundException);
             icon.setImageDrawable(pm.getApplicationIcon(context.getApplicationInfo()));
         }
 
@@ -65,11 +64,43 @@ public class FavouritesAdapter extends BaseAdapter
     }
 
     /**
-     * Add an LauncherEntry to the list of selectable options
+     * Add a favourite to the favorites bar
      */
 
     public void add(final FavoriteInfo app) {
         entries.add(app);
         Collections.sort(entries, FavoriteInfoComparator.InstanceHolder.INSTANCE);
         notifyDataSetChanged();
-    }}
+    }
+
+    /**
+     * Save a new favourite.
+     */
+
+    public void save(final FavoriteInfo app) {
+        SQLiteDatabase db = new DBHelper(context).getWritableDatabase();
+        try {
+            db.execSQL("insert into "+DBHelper.FAVORITES_TABLE+"(package, bar) values ('"+app.packageName+"', 0)");
+        } finally {
+            db.close();
+        }
+
+        add(app);
+    }
+    /**
+     * Remove a favorite from the favorites bar
+     */
+
+    public void remove(final FavoriteInfo app) {
+        entries.remove(app);
+        Collections.sort(entries, FavoriteInfoComparator.InstanceHolder.INSTANCE);
+
+        SQLiteDatabase db = new DBHelper(context).getWritableDatabase();
+        try {
+            db.execSQL("delete from "+DBHelper.FAVORITES_TABLE+" where package = '"+app.packageName+"'");
+        } finally {
+            db.close();
+        }
+        notifyDataSetChanged();
+    }
+}

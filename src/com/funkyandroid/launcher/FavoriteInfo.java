@@ -25,4 +25,7 @@ public class FavoriteInfo {
         name = appInfo.appName;
     }
 
+    public String toString() {
+        return packageName+":"+name;
+    }
 }
