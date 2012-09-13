@@ -5,19 +5,23 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ExpandableListView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
+import android.widget.*;
 import com.funkyandroid.launcher.database.DBHelper;
 import com.funkyandroid.launcher.launcherentries.AppCategoryEntry;
 import com.funkyandroid.launcher.launcherentries.SystemLauncherEntry;
 
 public class Launcher extends ExpandableListActivity {
+
+    /**
+     * The default web page for the browser
+     */
+
+    private static final String DEFAULT_WEBPAGE = "http://www.funkyandroid.com/";
 
     /**
      * Called when the activity is first created.
@@ -95,8 +99,12 @@ public class Launcher extends ExpandableListActivity {
             Intent searchIntent = new Intent("android.search.action.GLOBAL_SEARCH" );
             la.add(new SystemLauncherEntry(searchIntent, getText(R.string.search).toString(), 2));
 
-            Intent settingsIntent = new Intent("android.settings.SETTINGS" );
+            Intent settingsIntent = new Intent( "android.settings.SETTINGS" );
             la.add(new SystemLauncherEntry(settingsIntent, getText(R.string.settings).toString(), 3));
+
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(DEFAULT_WEBPAGE));
+            la.add(new SystemLauncherEntry(browserIntent, getText(R.string.browser).toString(), 1));
+
 
             Cursor categories = db.query(DBHelper.CATEGORIES_TABLE, CATEGORY_COLUMNS, null, null, null, null, null );
             try {
