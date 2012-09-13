@@ -14,12 +14,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
+import com.funkyandroid.launcher.bluetooth.ListenerService;
 import com.funkyandroid.launcher.database.DBHelper;
 import com.funkyandroid.launcher.launcherentries.AppCategoryEntry;
 import com.funkyandroid.launcher.launcherentries.SystemLauncherEntry;
 import com.funkyandroid.launcher.ui.HorizontalListView;
 
 public class Launcher extends ExpandableListActivity {
+
+    public static final String LOG_TAG = "FunkyLauncher";
 
     /**
      * The default web page for the browser
@@ -39,6 +42,8 @@ public class Launcher extends ExpandableListActivity {
 
         new FavoritesBuilder().execute();
         new EntryBuilder().execute();
+
+        startService(new Intent(this, ListenerService.class));
     }
 
     /**
