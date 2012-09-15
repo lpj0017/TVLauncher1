@@ -6,21 +6,14 @@
               android:paddingRight="20dp"
               android:paddingBottom="10dp"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent" >
+              android:layout_height="fill_parent">
     <TextView
             android:id="@+id/title"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:includeFontPadding="false"
             android:textSize="48dp"
-            android:textColor="#888" />
-    <TextView android:id="@+id/empty"
-              android:visibility="gone"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:textSize="32dp"
-              android:paddingLeft="40dp"
-              android:textColor="#aaa"
-              android:text="@string/empty"
-            />
+            android:textColor="#444"
+            android:fontFamily="Typewriter" />
 </com.funkyandroid.launcher.LauncherEntryView>
 
