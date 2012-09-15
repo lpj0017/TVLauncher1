@@ -11,7 +11,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.*;
 import com.funkyandroid.launcher.database.DBHelper;
 import com.funkyandroid.launcher.launcherentries.AppCategoryEntry;
@@ -38,6 +40,15 @@ public class Launcher extends ExpandableListActivity {
 
         getExpandableListView().setGroupIndicator(null);
         getExpandableListView().requestFocus();
+
+        View favView = findViewById(R.id.header_favorites);
+        ViewGroup.LayoutParams favDimens = favView.getLayoutParams();
+        try {
+            favDimens.height += getPackageManager().getApplicationIcon(getPackageName()).getIntrinsicHeight();
+        } catch(PackageManager.NameNotFoundException nnfe) {
+            Log.e(LOG_TAG, "Unable to find icon size", nnfe);
+        }
+        favView.setLayoutParams(favDimens);
 
         new FavoritesBuilder().execute();
         new EntryBuilder().execute();
