@@ -1,9 +1,8 @@
-package com.funkyandroid.launcher.launcherentries;
+package tv.aosp.launcher.launcherentries;
 
 import android.content.Context;
 import android.content.Intent;
-import com.funkyandroid.launcher.LauncherEntry;
-import com.funkyandroid.launcher.LauncherEntryView;
+import tv.aosp.launcher.LauncherEntry;
 
 /**
  * LauncherEntry which represents a system action

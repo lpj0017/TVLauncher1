@@ -1,16 +1,11 @@
-package com.funkyandroid.launcher.launcherentries;
+package tv.aosp.launcher.launcherentries;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
-import com.funkyandroid.launcher.*;
-import com.funkyandroid.launcher.database.DBHelper;
+import tv.aosp.launcher.*;
 
 import java.util.*;
 

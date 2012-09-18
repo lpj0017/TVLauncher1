@@ -1,4 +1,4 @@
-package com.funkyandroid.launcher;
+package tv.aosp.launcher;
 
 import android.content.Context;
 

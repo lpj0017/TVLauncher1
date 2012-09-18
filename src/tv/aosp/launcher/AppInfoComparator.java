@@ -1,4 +1,4 @@
-package com.funkyandroid.launcher;
+package tv.aosp.launcher;
 
 /**
  * Created with IntelliJ IDEA.

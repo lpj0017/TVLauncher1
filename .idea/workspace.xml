@@ -13,16 +13,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6b1f1a1-6641-44ad-b763-84b70a74c11d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/bluetooth/BluetoothListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/bluetooth/Client.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/bluetooth/ConnectionHandlerThread.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/bluetooth/ListenerService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/bluetooth/Server.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/AppInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/AppInfoComparator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/FavoriteInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/FavoriteInfoComparator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/FavouritesAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/Launcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntryAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntryComparator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntryView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/database/DBHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/launcherentries/AppCategoryEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/launcherentries/SystemLauncherEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/ui/HorizontalListView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gen/com/funkyandroid/launcher/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/tv/aosp/launcher/BuildConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gen/com/funkyandroid/launcher/R.java" afterPath="$PROJECT_DIR$/gen/tv/aosp/launcher/R.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/AppInfo.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/AppInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/AppInfoComparator.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/AppInfoComparator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/FavoriteInfo.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/FavoriteInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/FavoriteInfoComparator.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/FavoriteInfoComparator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/FavouritesAdapter.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/FavouritesAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/Launcher.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/Launcher.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/LauncherEntry.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntry.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/LauncherEntryAdapter.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntryAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/LauncherEntryComparator.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntryComparator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/LauncherEntryView.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntryView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/database/DBHelper.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/database/DBHelper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/launcherentries/AppCategoryEntry.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/launcherentries/AppCategoryEntry.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/launcherentries/SystemLauncherEntry.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/launcherentries/SystemLauncherEntry.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/ui/HorizontalListView.java" afterPath="$PROJECT_DIR$/src/tv/aosp/launcher/ui/HorizontalListView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunkyLauncher.iml" afterPath="$PROJECT_DIR$/FunkyLauncher.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/funkyandroid/launcher/Launcher.java" afterPath="$PROJECT_DIR$/src/com/funkyandroid/launcher/Launcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
     </list>
     <ignored path="FunkyLauncher.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,16 +102,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Launcher.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/funkyandroid/launcher/Launcher.java">
+      <file leaf-file-name="Launcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tv/aosp/launcher/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="-0.21077283">
+            <state line="4" column="41" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#4843#5141#0" expanded="true" />
-                <element signature="e#5126#5127#0" expanded="true" />
-                <element signature="e#5208#6638#0" expanded="true" />
-                <element signature="e#6623#6624#0" expanded="true" />
+                <element signature="e#5176#5474#0" expanded="true" />
+                <element signature="e#5459#5460#0" expanded="true" />
+                <element signature="e#5541#6971#0" expanded="true" />
+                <element signature="e#6956#6957#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="41" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.5801105">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/funkyandroid/launcher/LauncherEntryAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/funkyandroid/launcher/FavoriteInfoComparator.java" />
         <option value="$PROJECT_DIR$/src/com/funkyandroid/launcher/AppInfo.java" />
         <option value="$PROJECT_DIR$/src/com/funkyandroid/launcher/FavouritesAdapter.java" />
@@ -123,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/com/funkyandroid/launcher/bluetooth/ListenerService.java" />
         <option value="$PROJECT_DIR$/src/com/funkyandroid/launcher/bluetooth/ConnectionHandlerThread.java" />
         <option value="$PROJECT_DIR$/src/com/funkyandroid/launcher/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/tv/aosp/launcher/Launcher.java" />
       </list>
     </option>
   </component>
@@ -130,9 +161,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="3" />
     <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="798" />
+    <option name="width" value="1917" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -167,17 +199,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,7 +213,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TVLauncher" />
+              <option name="myItemId" value="TVLauncher1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -202,7 +223,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TVLauncher" />
+              <option name="myItemId" value="TVLauncher1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -216,18 +237,42 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FunkyLauncher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FunkyLauncher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/com/funkyandroid/launcher" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.sourceCode" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -247,14 +292,15 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/res/layout" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.funkyandroid.launcher" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/res/drawable-ldpi" />
       <recent name="$PROJECT_DIR$/res/drawable-mdpi" />
       <recent name="$PROJECT_DIR$/res/drawable-hdpi" />
       <recent name="$PROJECT_DIR$/res/drawable-xhdpi" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tv.aosp" />
+      <recent name="com.funkyandroid.launcher" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.FunkyLauncher">
@@ -516,7 +562,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="798" extended-state="0" />
+    <frame x="3" y="22" width="1917" height="970" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -526,7 +572,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39929327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293944" sideWeight="0.5066809" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286219" sideWeight="0.5066809" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -535,7 +581,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.6702002" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2482066" sideWeight="0.6706056" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24692678" sideWeight="0.6713781" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.48957777" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -663,12 +709,12 @@
         <state line="6" column="0" selection-start="220" selection-end="220" vertical-scroll-proportion="0.16605166" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/funkyandroid/launcher/launcherentries/AppCategoryEntry.java">
+    <entry file="file://$PROJECT_DIR$/src/tv/aosp/launcher/launcherentries/AppCategoryEntry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="95" selection-start="2566" selection-end="2566" vertical-scroll-proportion="0.43357933" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/funkyandroid/launcher/FavoriteInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/tv/aosp/launcher/FavoriteInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
       </provider>
@@ -678,46 +724,42 @@
         <state line="214" column="28" selection-start="10733" selection-end="10733" vertical-scroll-proportion="0.3326923" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/funkyandroid/launcher/FavouritesAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/tv/aosp/launcher/FavouritesAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="11" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/funkyandroid/launcher/FavoriteInfoComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/tv/aosp/launcher/FavoriteInfoComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="13" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/funkyandroid/launcher/ui/HorizontalListView.java">
+    <entry file="file://$PROJECT_DIR$/src/tv/aosp/launcher/ui/HorizontalListView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="25" selection-start="3956" selection-end="3965" vertical-scroll-proportion="0.036231883">
-          <folding />
+        <state line="142" column="25" selection-start="3956" selection-end="3965" vertical-scroll-proportion="0.036231883" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tv/aosp/launcher/LauncherEntryView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.19203748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tv/aosp/launcher/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="41" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#5176#5474#0" expanded="true" />
+            <element signature="e#5459#5460#0" expanded="true" />
+            <element signature="e#5541#6971#0" expanded="true" />
+            <element signature="e#6956#6957#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="41" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.73770493">
+        <state line="21" column="41" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.5801105">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/funkyandroid/launcher/LauncherEntryView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.19203748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/funkyandroid/launcher/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="-0.21077283">
-          <folding>
-            <element signature="e#4843#5141#0" expanded="true" />
-            <element signature="e#5126#5127#0" expanded="true" />
-            <element signature="e#5208#6638#0" expanded="true" />
-            <element signature="e#6623#6624#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

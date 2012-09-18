@@ -1,4 +1,4 @@
-package com.funkyandroid.launcher;
+package tv.aosp.launcher;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
-import com.funkyandroid.launcher.database.DBHelper;
+import tv.aosp.launcher.database.DBHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,10 +1,7 @@
-package com.funkyandroid.launcher;
+package tv.aosp.launcher;
 
 import android.app.ExpandableListActivity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,10 +12,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
-import com.funkyandroid.launcher.database.DBHelper;
-import com.funkyandroid.launcher.launcherentries.AppCategoryEntry;
-import com.funkyandroid.launcher.launcherentries.SystemLauncherEntry;
-import com.funkyandroid.launcher.ui.HorizontalListView;
+import tv.aosp.launcher.database.DBHelper;
+import tv.aosp.launcher.launcherentries.AppCategoryEntry;
+import tv.aosp.launcher.launcherentries.SystemLauncherEntry;
+import tv.aosp.launcher.ui.HorizontalListView;
 
 public class Launcher extends ExpandableListActivity {
 

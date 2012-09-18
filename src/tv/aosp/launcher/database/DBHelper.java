@@ -1,8 +1,7 @@
-package com.funkyandroid.launcher.database;
+package tv.aosp.launcher.database;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;

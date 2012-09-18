@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.funkyandroid.launcher;
+package tv.aosp.launcher;
 
 public final class R {
     public static final class attr {
@@ -14,9 +14,8 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int empty=0x7f060004;
         public static final int entry=0x7f060002;
-        public static final int header_favorites=0x7f060005;
+        public static final int header_favorites=0x7f060004;
         public static final int icon=0x7f060000;
         public static final int name=0x7f060001;
         public static final int title=0x7f060003;

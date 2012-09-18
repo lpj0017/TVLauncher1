@@ -1,4 +1,4 @@
-package com.funkyandroid.launcher;
+package tv.aosp.launcher;
 
 /**
  * Class holding the required information about an application.
