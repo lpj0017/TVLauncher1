@@ -15,7 +15,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     private Context context;
 
-    static final String DB_NAME = "funky_launcher";
+    static final String DB_NAME = "TVLauncher";
     static final int DB_VERSION = 2;
     public static final String CATEGORIES_TABLE = "categories";
     public static final String APPS_TABLE = "apps";
