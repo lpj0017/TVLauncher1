@@ -60,7 +60,6 @@ public class AppCategoryEntry extends LauncherEntry {
      */
 
     public Object getChild(int position) {
-        Log.i("FunkyLauncher", ":" + position);
         return apps.get(position);
     }
 
