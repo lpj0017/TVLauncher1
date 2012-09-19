@@ -71,7 +71,7 @@ public class AppCategoryEntry extends LauncherEntry {
                 info.appName = pm.getApplicationLabel(pm.getApplicationInfo(info.packageName, 0)).toString();
                 apps.add(info);
             } catch(PackageManager.NameNotFoundException nnfe) {
-                Log.e("FunkyLauncher", "Name Not Found", nnfe);
+                Log.e(Launcher.LOG_TAG, "Name Not Found", nnfe);
             }
         }
 
