@@ -13,23 +13,15 @@ import java.util.*;
  * A LauncherEntry which holds the details of an application category
  */
 public class AppCategoryEntry extends LauncherEntry {
-    private static final String[] COLUMNS = { "packageName" };
-
     /**
      * The apps in this category
      */
 
     private List<AppInfo> apps = new ArrayList<AppInfo>();
 
-    /**
-     * The intent to be fired if this item is selected
-     */
-
-    private int id;
 
     public AppCategoryEntry(final Context context, final int id, final String caption) {
         super(caption, 0);
-        this.id = id;
         populateChildren(context);
     }
 
@@ -39,7 +31,7 @@ public class AppCategoryEntry extends LauncherEntry {
      * @param context The context
      */
     public void onSelected(final Context context) {
-        return; // Do nothing, the group expansion handled via the widget is enough.
+        ; // Do nothing, the group expansion handled via the widget is enough.
     }
 
     /**
