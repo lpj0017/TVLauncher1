@@ -91,7 +91,7 @@ public class LauncherEntryAdapter extends BaseExpandableListAdapter {
         try {
             icon.setImageDrawable(pm.getApplicationIcon(appInfo.packageName));
         } catch(PackageManager.NameNotFoundException nameNotFoundExcption) {
-            Log.e("FunkyLauncher", "Problem finding icon for package "+appInfo, nameNotFoundExcption);
+            Log.e(Launcher.LOG_TAG, "Problem finding icon for package "+appInfo, nameNotFoundExcption);
             icon.setImageDrawable(pm.getApplicationIcon(context.getApplicationInfo()));
         }
 
