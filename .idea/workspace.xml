@@ -15,7 +15,7 @@
     <list default="true" id="b6b1f1a1-6641-44ad-b763-84b70a74c11d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <ignored path="FunkyLauncher.iws" />
+    <ignored path="TVLauncher.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +82,7 @@
     <ui_properties />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="FunkyLauncher" />
+    <favorites_list name="TVLauncher" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -205,7 +205,7 @@
   </component>
   <component name="ProjectStructureProblems">
     <ignored-problems>
-      <problem id="invalid-module-dependency(module:FunkyLauncher,&lt; Android 4.0 Platform &gt;)" />
+      <problem id="invalid-module-dependency(module:TVLauncher,&lt; Android 4.0 Platform &gt;)" />
     </ignored-problems>
   </component>
   <component name="ProjectView">
@@ -225,13 +225,13 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FunkyLauncher" />
+              <option name="myItemId" value="TVLauncher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FunkyLauncher" />
+              <option name="myItemId" value="TVLauncher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -245,11 +245,11 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FunkyLauncher" />
+              <option name="myItemId" value="TVLauncher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FunkyLauncher" />
+              <option name="myItemId" value="TVLauncher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,16 +274,16 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="ExportedApkPath" value="$PROJECT_DIR$/FunkyLauncher.apk" />
+    <property name="ExportedApkPath" value="$PROJECT_DIR$/TVLauncher.apk" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode" />
-    <property name="ExportedModule" value="FunkyLauncher" />
+    <property name="ExportedModule" value="TVLauncher" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
-    <property name="KeystoreLocation" value="$USER_HOME$/Documents/Funky Android/Projects/aospTV/TVLauncher1/release_keys" />
+    <property name="KeystoreLocation" value="$USER_HOME$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="KeyAlias" value="release_key" />
     <property name="AndroidTargetDevices" value="015d2109a75ff00e" />
@@ -313,7 +313,7 @@
       <recent name="com.funkyandroid.launcher" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.FunkyLauncher">
+  <component name="RunManager" selected="Android Application.TVLauncher">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -476,8 +476,8 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="false" name="FunkyLauncher" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="FunkyLauncher" />
+    <configuration default="false" name="TVLauncher" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="TVLauncher" />
       <option name="ACTIVITY_CLASS" value="tv.aosp.launcher.Launcher" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
@@ -496,7 +496,7 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Android Application.FunkyLauncher" />
+      <item index="0" class="java.lang.String" itemvalue="Android Application.TVLauncher" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -864,7 +864,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>FunkyLauncher</last-edited>
+          <last-edited>TVLauncher</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

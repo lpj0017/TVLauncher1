@@ -19,7 +19,7 @@ import tv.aosp.launcher.ui.HorizontalListView;
 
 public class Launcher extends ExpandableListActivity {
 
-    public static final String LOG_TAG = "FunkyLauncher";
+    public static final String LOG_TAG = "TVLauncher";
 
     /**
      * The default web page for the browser
